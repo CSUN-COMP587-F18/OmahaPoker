@@ -160,6 +160,15 @@ public class PokerTest {
         Assert.assertEquals(players.get(0).getrank(),9);
     }
     @Test
+    public void testFlushMultiplePlayer(){
+        String [] args={"3c", "4c","5c","7s","Qs", "4h", "Kd", "Qc", "9c", "9c","6c","Tc","2c","Th","5h"};
+        players=Poker.setCards(args,players,numplayers);
+        numplayers=players.size();
+        Poker.rank(numplayers,players);
+        Assert.assertEquals(players.get(0).getrank(),9);
+        Assert.assertEquals(players.get(1).getrank(),9);
+    }
+    @Test
     public void testTripletsOnePlayer(){
         String [] args={"3d", "3h","3s","7s","Qs", "4h", "Kd", "Qc", "7h", "7c"};
         players=Poker.setCards(args,players,numplayers);
@@ -168,11 +177,29 @@ public class PokerTest {
         Assert.assertEquals(players.get(0).getrank(),10);
     }
     @Test
-    public void testOverfullHouseOnePlayer(){
-        String [] args={"3c", "3h","3s","9s","Qs", "4h", "Kd", "Qc", "9c", "3d"};
+    public void testTripletsMultiplePlayer(){
+        String [] args={"3d", "3h","3s","7s","Qs", "4h", "Kd", "Qc", "7h", "7c","5h","5s","5c","th","td"};
         players=Poker.setCards(args,players,numplayers);
         numplayers=players.size();
         Poker.rank(numplayers,players);
+        Assert.assertEquals(players.get(0).getrank(),10);
+        Assert.assertEquals(players.get(1).getrank(),10);
+    }
+    @Test
+    public void testOverfullHouseOnePlayer(){
+        String [] args={"3c", "3h","3s","3d","Qs", "4h", "Kd", "Qc", "9c", "9s"};
+        players=Poker.setCards(args,players,numplayers);
+        numplayers=players.size();
+        Poker.rank(numplayers,players);
+        Assert.assertEquals(players.get(0).getrank(),11);
+    }
+    @Test
+    public void testOverfullHouseMultiplePlayers(){
+        String [] args={"3c", "3h","3s","3d","Qs", "4h", "Kd", "Qc", "9c", "9s","6s","6h","th","td","kh"};
+        players=Poker.setCards(args,players,numplayers);
+        numplayers=players.size();
+        Poker.rank(numplayers,players);
+        Assert.assertEquals(players.get(0).getrank(),11);
         Assert.assertEquals(players.get(0).getrank(),11);
     }
     @Test
@@ -182,6 +209,15 @@ public class PokerTest {
         numplayers=players.size();
         Poker.rank(numplayers,players);
         Assert.assertEquals(players.get(0).getrank(),12);
+    }
+    @Test
+    public void testHomoSapiensMultiplePlayers(){
+        String [] args={"jh", "qs","kd","js","Qh", "4h", "Kh", "Qc", "9c", "3d","ks","kc","5s","6h","4s"};
+        players=Poker.setCards(args,players,numplayers);
+        numplayers=players.size();
+        Poker.rank(numplayers,players);
+        Assert.assertEquals(players.get(0).getrank(),12);
+        Assert.assertEquals(players.get(1).getrank(),12);
     }
     @Test
     public void testKingdomOnePlayer(){
@@ -200,12 +236,32 @@ public class PokerTest {
         Assert.assertEquals(players.get(0).getrank(),14);
     }
     @Test
+    public void testOrgyMultiplePlayers(){
+        String [] args={"jc", "jh","js","9s","Qs", "4h", "Kd", "Qc", "qh", "3d","jd","qd","td","th","ts"};
+        players=Poker.setCards(args,players,numplayers);
+        numplayers=players.size();
+        Poker.rank(numplayers,players);
+        Assert.assertEquals(players.get(0).getrank(),14);
+        Assert.assertEquals(players.get(1).getrank(),14);
+
+    }
+    @Test
     public void testPoliticsOnePlayer(){
-        String [] args={"jh", "qh","kh","js","Qh", "4h", "Kd", "Qs", "ks", "3d"};
+        String [] args={"jh", "qh","kh","js","th", "4h", "td", "Qs", "ks", "3d"};
         players=Poker.setCards(args,players,numplayers);
         numplayers=players.size();
         Poker.rank(numplayers,players);
         Assert.assertEquals(players.get(0).getrank(),15);
+    }
+    @Test
+    public void testPoliticsMultiplePlayers(){
+        String [] args={"jh", "qh","kh","js","th", "4h", "td", "Qs", "ks", "3d","jd","qd","kd","4d","5d"};
+        players=Poker.setCards(args,players,numplayers);
+        numplayers=players.size();
+        Poker.rank(numplayers,players);
+        Assert.assertEquals(players.get(0).getrank(),15);
+        Assert.assertEquals(players.get(1).getrank(),15);
+
     }
     @Test
     public void testDinnerPartyOnePlayer(){
