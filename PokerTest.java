@@ -271,6 +271,37 @@ public class PokerTest {
         Poker.rank(numplayers,players);
         Assert.assertEquals(players.get(0).getrank(),16);
     }
-
-
+    //Automated testing
+    @Test
+    public void testNonRainbowOnePlayerAutomated(){
+        String[] args= new String[10];
+        //Omitted one suit
+        String[] suits = {"c", "h", "d"};
+        int z=0;
+        //Hand generation
+        for (int i=2;i<=9;i++){
+            args[0]=String.valueOf(i) + suits[z];
+            args[1]=String.valueOf((i+1)%10) + suits[z+1];
+            args[2]=String.valueOf((i+2)%10) + suits[z+2];
+            args[3]=String.valueOf((i+3)%10) + suits[z];
+            args[4]=String.valueOf((i+4)%10) + suits[z+1];
+            args[5]=String.valueOf((i+5)%10) + suits[z+2];
+            args[6]=String.valueOf((i+6)%10) + suits[z];
+            args[7]=String.valueOf((i+7)%10) + suits[z+1];
+            args[8]=String.valueOf((i+8)%10) + suits[z+2];
+            args[9]=String.valueOf((i+9)%10) + suits[z];
+            //Checking for zeroes, convert to value ten (t)
+            for (int j=0; j<10;j++){
+                if (args[j].charAt(0).equals('0')){
+                    String newCard=args[j].substring(1);
+                    args[j]="t"+ newCard;
+                }
+            }
+            //end hand generation, Test generated hand now
+            players = Poker.setCards(args,players,numplayers);
+            numplayers=players.size();
+            Poker.rank(numplayers,players);
+            Assert.assertEquals(players.get(0).getrank(),1);
+        }
+    }
 }
