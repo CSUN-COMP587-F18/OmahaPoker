@@ -272,13 +272,13 @@ public class PokerTest {
         Assert.assertEquals(players.get(0).getrank(),16);
     }
     //Automated testing
-    //This function is called to run nonrainbow tests for all possible nonrainbow hands
+    //This function is called to run nonrainbow tests for all possible nonrainbow hands ( Assuming 3 suits )
     public void nonRainbowHelper(String[] args, String[] suits){
         //String[] suits = {"c", "h", "d"};
         int z=0;
         //Hand generation
-        for (int i=2;i<=9;i++){
-            args[0]=String.valueOf(i) + suits[z];
+        for (int i=2;i<=14;i++){
+            args[0]=String.valueOf(i%13) + suits[z];
             args[1]=String.valueOf((i+1)%13) + suits[z+1];
             args[2]=String.valueOf((i+2)%13) + suits[z+2];
             args[3]=String.valueOf((i+3)%13) + suits[z];
@@ -338,26 +338,98 @@ public class PokerTest {
         suits[2]="h"
         nonRainbowHelper(args,suits);
     }
+    //Automated testing
+    //This helper will work for any hands that use 4 suits
+    public int[] fourSuitHelper(String[] args, String[] suits){
+        //String[] suits = {"c", "h", "d","s"};
+        int z=0;
+        int [] solution = new solution[13];
+        //Hand generation
+        for (int i=2;i<=14;i++){
+            args[0]=String.valueOf(i%13) + suits[z];
+            args[1]=String.valueOf((i+1)%13) + suits[z+1];
+            args[2]=String.valueOf((i+2)%13) + suits[z+2];
+            args[3]=String.valueOf((i+3)%13) + suits[z+3];
+            args[4]=String.valueOf((i+4)%13) + suits[z];
+            args[5]=String.valueOf((i+5)%13) + suits[z+1];
+            args[6]=String.valueOf((i+6)%13) + suits[z+2];
+            args[7]=String.valueOf((i+7)%13) + suits[z+3];
+            args[8]=String.valueOf((i+8)%13) + suits[z];
+            args[9]=String.valueOf((i+9)%13) + suits[z+1];
+            //Checking for tens, convert to value ten (t)
+            for (int j=0; j<10;j++){
+                if (args[j].charAt(0).equals('1') && args[j].charAt(1).equals('0')){
+                    String newCard=args[j].substring(2);
+                    args[j]="t"+ newCard;
+                }
+            //Checking for 11, convert to value ten (j)
+            for (int j=0; j<10;j++){
+                if (args[j].charAt(0).equals('1') && args[j].charAt(1).equals('1')){
+                    String newCard=args[j].substring(2);
+                    args[j]="j"+ newCard;
+                }
+            //Checking for 12, convert to value ten (q)
+            for (int j=0; j<10;j++){
+                if (args[j].charAt(0).equals('1') && args[j].charAt(1).equals('2')){
+                    String newCard=args[j].substring(2);
+                    args[j]="q"+ newCard;
+                }
+            //Checking for 0, convert to value ten (k)
+            for (int j=0; j<10;j++){
+                if (args[j].charAt(0).equals('0')){
+                    String newCard=args[j].substring(2);
+                    args[j]="k"+ newCard;
+                }
+            //Checking for ones, convert to value two (2)
+                if (args[j].charAt(0).equals('1')){
+                    String newCard=args[j].substring(1);
+                    args[j]="2"+ newCard;
+                }
+            }
+            //end hand generation, Test generated hand now
+            players = Poker.setCards(args,players,numplayers);
+            numplayers=players.size();
+            Poker.rank(numplayers,players);
+            solution[i-2]= players.get(0).getrank();
+        }
+        return solution;
+    }
     @Test
     public void testRainbowOnePlayerAutomated(){
         String[] args=new String[10];
         String[] suits = {"c", "h", "d","s"};
+        int [] solutions = fourSuitHelper(args,suits);
+        for (int i = 0; i<=12; i++){
+            Assert.assertEquals(solutions[i],2);
+        }
+    }
+
+    @Test
+    public void testMonochromaticOnePlayerAutomated(){
+        String[] args=new String[10];
+        String[] Blacksuits = {"c","s"};
+        String[] Redsuits ={"h", "d"};
+    }
+    //Automated testing
+    public void evenOddHelper(String[] args, String[] suits){
+        //String[] suits = {"c", "h", "d", "s"};
         int z=0;
-        for (int i=2;i<=5;i++){
-            args[0]=String.valueOf(i) + suits[z];
-            args[1]=String.valueOf((i+1)%10) + suits[z+1];
-            args[2]=String.valueOf((i+2)%10) + suits[z+2];
-            args[3]=String.valueOf((i+3)%10) + suits[z+3];
-            args[4]=String.valueOf((i+4)%10) + suits[z];
-            args[5]=String.valueOf((i+5)%10) + suits[z+1];
-            args[6]=String.valueOf((i+6)%10) + suits[z+2];
-            args[7]=String.valueOf((i+7)%10) + suits[z+3];
-            args[8]=String.valueOf((i+8)%10) + suits[z];
-            args[9]=String.valueOf((i+9)%10) + suits[z+1];
-            //Checking for zeroes, convert to value ten (t)
+        //Hand generation
+        for (int i=2;i<=14;i++){
+            args[0]=String.valueOf(i%10) + suits[z];
+            args[1]=String.valueOf((i+2)%10) + suits[z+1];
+            args[2]=String.valueOf((i+4)%10) + suits[z+2];
+            args[3]=String.valueOf((i+6)%10) + suits[z];
+            args[4]=String.valueOf((i+8)%10) + suits[z+1];
+            args[5]=String.valueOf((i+10)%10) + suits[z+2];
+            args[6]=String.valueOf((i+12)%10) + suits[z+1];
+            args[7]=String.valueOf((i+14)%10) + suits[z+2];
+            args[8]=String.valueOf((i+16)%10) + suits[z+2];
+            args[9]=String.valueOf((i+18)%10) + suits[z];
+            //Checking for tens, convert to value ten (t)
             for (int j=0; j<10;j++){
-                if (args[j].charAt(0).equals('0')){
-                    String newCard=args[j].substring(1);
+                if (args[j].charAt(0).equals('1') && args[j].charAt(1).equals('0')){
+                    String newCard=args[j].substring(2);
                     args[j]="t"+ newCard;
                 }
             //Checking for ones, convert to value two (2)
@@ -370,7 +442,12 @@ public class PokerTest {
             players = Poker.setCards(args,players,numplayers);
             numplayers=players.size();
             Poker.rank(numplayers,players);
-            Assert.assertEquals(players.get(0).getrank(),2);
         }
+    }
+
+    @Test
+    public void testEvenOnePlayerAutomated(){
+
+
     }
 }
