@@ -1,6 +1,4 @@
-package poker;
-
-public class Player 
+public class Player
 {
 	private final int handsize=5;
 	protected Card[]playercards=new Card[handsize];
