@@ -289,42 +289,49 @@ public class PokerTest {
             args[8]=((i+8)%13) + suits[z+2];
             args[9]=((i+9)%13) + suits[z];
             //Checking for tens, convert to value ten (t)
-            for (int j=0; j<10;j++){
-                if (String.valueOf(args[j].charAt(0)).equals("1") && String.valueOf(args[j].charAt(1)).equals('0')){
-                    String newCard=args[j].substring(2);
-                    args[j]="t"+ newCard;
+            for (int j=0; j<10;j++) {
+                if (args[j].substring(0,2).equals("10")) {
+                    String newCard = args[j].substring(2);
+                    args[j] = "t" + newCard;
                 }
-            //Checking for 11, convert to value ten (j)
-            for (j=0; j<10;j++) {
-                if (String.valueOf(args[j].charAt(0)).equals('1') && String.valueOf(args[j].charAt(1)).equals('1')) {
+            }
+
+            //Checking for 11, convert to value Jack (j)
+            for (int j=0; j<10;j++) {
+                if (args[j].substring(0,2).equals("11")) {
                     String newCard = args[j].substring(2);
                     args[j] = "j" + newCard;
                 }
             }
-            //Checking for 12, convert to value ten (q)
-            for (j=0; j<10;j++) {
-                if (String.valueOf(args[j].charAt(0)).equals('1') && String.valueOf(args[j].charAt(1)).equals('2')) {
+            //Checking for 12, convert to value Queen (q)
+            for (int j=0; j<10;j++) {
+                if (args[j].substring(0,2).equals("12")) {
                     String newCard = args[j].substring(2);
                     args[j] = "q" + newCard;
                 }
             }
-            //Checking for 0, convert to value ten (k)
-            for (j=0; j<10;j++) {
-                if (String.valueOf(args[j].charAt(0)).equals('0')) {
-                    String newCard = args[j].substring(2);
+            //Checking for 0, convert to value King (k)
+            for (int j=0; j<10;j++) {
+                if (args[j].substring(0,1).equals("0")) {
+                    String newCard = args[j].substring(1);
                     args[j] = "k" + newCard;
                 }
             }
-            //Checking for ones, convert to value two (2)
-                if (String.valueOf(args[j].charAt(0)).equals('1')){
-                    String newCard=args[j].substring(1);
-                    args[j]="2"+ newCard;
+            //Checking for ones, convert to value ace (a)
+                for(int j = 0; j<10 ; j++){
+                    if (args[j].substring(0,1).equals("1")){
+                        String newCard=args[j].substring(1);
+                        args[j]="a"+ newCard;
+                    }
                 }
-            }
             //end hand generation, Test generated hand now
             players = Poker.setCards(args,players,numplayers);
             numplayers=players.size();
             Poker.rank(numplayers,players);
+            System.out.println("This is iteration " + i + " and it is " + String.valueOf(players.get(0).getrank()));
+            for (int k=0 ; k < 10 ; k++){
+                System.out.println(args[k]);
+            }
             Assert.assertEquals(players.get(0).getrank(),1);
         }
     }
@@ -361,41 +368,45 @@ public class PokerTest {
             args[9]=((i+9)%13) + suits[z+1];
             //Checking for tens, convert to value ten (t)
             for (int j=0; j<10;j++) {
-                if (String.valueOf(args[j].charAt(0)).equals('1') && String.valueOf(args[j].charAt(1)).equals('0')) {
+                if (args[j].substring(0,2).equals("10")) {
                     String newCard = args[j].substring(2);
                     args[j] = "t" + newCard;
                 }
             }
-            //Checking for 11, convert to value ten (j)
+            //Checking for 11, convert to value jack (j)
             for (int j=0; j<10;j++) {
-                if (String.valueOf(args[j].charAt(0)).equals('1') && String.valueOf(args[j].charAt(1)).equals('1')) {
+                if (args[j].substring(0,2).equals("11")) {
                     String newCard = args[j].substring(2);
                     args[j] = "j" + newCard;
                 }
             }
-            //Checking for 12, convert to value ten (q)
+            //Checking for 12, convert to value queen (q)
             for (int j=0; j<10;j++) {
-                if (String.valueOf(args[j].charAt(0)).equals('1') && String.valueOf(args[j].charAt(1)).equals('2')) {
+                if (args[j].substring(0,2).equals("12")) {
                     String newCard = args[j].substring(2);
                     args[j] = "q" + newCard;
                 }
             }
-            //Checking for 0, convert to value ten (k)
+            //Checking for 0, convert to value king (k)
             for (int j=0; j<10;j++) {
-                if (String.valueOf(args[j].charAt(0)).equals('0')) {
-                    String newCard = args[j].substring(2);
+                if (args[j].substring(0,1).equals("0")) {
+                    String newCard = args[j].substring(1);
                     args[j] = "k" + newCard;
                 }
-            //Checking for ones, convert to value two (2)
-                if (String.valueOf(args[j].charAt(0)).equals('1')){
+            //Checking for ones, convert to value ace (2)
+                if (args[j].substring(0,1).equals("1")){
                     String newCard=args[j].substring(1);
-                    args[j]="2"+ newCard;
+                    args[j]="a"+ newCard;
                 }
             }
             //end hand generation, Test generated hand now
             players = Poker.setCards(args,players,numplayers);
             numplayers=players.size();
             Poker.rank(numplayers,players);
+            System.out.println("This is iteration " + i + " and it is " + String.valueOf(players.get(0).getrank()));
+            for (int k=0 ; k < 10 ; k++){
+                System.out.println(args[k]);
+            }
             solution[i-2]= players.get(0).getrank();
         }
         return solution;

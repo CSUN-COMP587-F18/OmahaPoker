@@ -408,7 +408,13 @@ public class Poker
                 int odduserCards = 0;
                 int evens = 0;
                 int odds = 0;
-                int [] tempCards = a;
+                int [] tempCards= new int[52];
+                for (int s = 0; s < 52 ; s++){
+                    tempCards[s]= a[s];
+                }
+                for (int s = 0 ; s<52 ; s++){
+                    System.out.println(a[s]);
+                }
 
                 //Check user cards, must have at least 2 even or odds to consider this hand.
                 for (int j = 0; j < 52; j++) {
@@ -455,6 +461,7 @@ public class Poker
                     else if (evens >5){
                         players.get(i).setrank(7);
                     }
+
                 }
 
 
@@ -501,7 +508,10 @@ public class Poker
             }
             //check for 3 pair
             if (players.get(i).getrank() <6){
-                int [] tempCards = a;
+                int [] tempCards= new int[52];
+                for (int s = 0; s < 52 ; s++){
+                    tempCards[s]= a[s];
+                }
                 int countOfPairs= 0;
                 int userCards=0;
                 boolean PairHasBeenFound =false;
@@ -532,6 +542,9 @@ public class Poker
                         }
                     }
                 }
+//                for (int s = 0 ; s<52 ; s++){
+//                    System.out.println(a[s]);
+//                }
             }
             //check for monochromatic
             if (players.get(i).getrank() < 5) {
@@ -598,12 +611,22 @@ public class Poker
 //		}
             if (players.get(i).getrank() < 3) {
                 int[] suits = {0, 0, 0, 0};
-                int[] tempCards = a;
+                int [] tempCards= new int[52];
+                for (int s = 0; s < 52 ; s++){
+                    tempCards[s]= a[s];
+                }
+//                for (int s = 0 ; s<52 ; s++){
+//                    System.out.println(tempCards[s]);
+//                }
                 //Check to see how many suits user has first, at most 3 unique suits can come from user hand
                 for (int j = 0; j < 52; j++) {
                     if (tempCards[j] == 2) {
                         tempCards[j] = -1;
                         suits[j / 13] = 1;
+                        System.out.println(suits[0]);
+                        System.out.println(suits[1]);
+                        System.out.println(suits[2]);
+                        System.out.println(suits[3]);
                     }
                 }
                 //if at least one suit is missing, Then we may still have a rainbow, also if all are accounted for, we
@@ -613,6 +636,10 @@ public class Poker
                         if (tempCards[j] == 1) {
                             tempCards[j] = -1;
                             suits[j / 13] = 1;
+                            System.out.println(suits[0]);
+                            System.out.println(suits[1]);
+                            System.out.println(suits[2]);
+                            System.out.println(suits[3]);
                         }
                     }
                 }
@@ -620,8 +647,6 @@ public class Poker
                 if (suits[0] == 1 && suits[1] == 1 && suits[2] == 1 && suits[3] == 1) {
                     players.get(i).setrank(2);
                 }
-
-
             }
         }
 		//end of for
