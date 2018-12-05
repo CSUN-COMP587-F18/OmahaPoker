@@ -1,6 +1,4 @@
-package poker;
-
-public class Card 
+public class Card
 {
 	private int value;
 	private int type;

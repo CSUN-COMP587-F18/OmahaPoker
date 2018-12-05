@@ -37,7 +37,7 @@ public class PokerTest {
     }
     @Test
     public void testRainbowMultiplePlayer(){
-        String [] args={"2c", "3c","4c","2s","3s", "5h", "8d", "jd", "7d", "8c","3h","8h","4d", "5d","6h"};
+        String [] args={"2c", "3c","4c","2s","3s", "5h", "8d", "jd", "7d", "8c","3h","8h","4d", "5d","jh"};
         players=Poker.setCards(args,players,numplayers);
         numplayers=players.size();
         Poker.rank(numplayers,players);
@@ -278,42 +278,45 @@ public class PokerTest {
         int z=0;
         //Hand generation
         for (int i=2;i<=14;i++){
-            args[0]=String.valueOf(i%13) + suits[z];
-            args[1]=String.valueOf((i+1)%13) + suits[z+1];
-            args[2]=String.valueOf((i+2)%13) + suits[z+2];
-            args[3]=String.valueOf((i+3)%13) + suits[z];
-            args[4]=String.valueOf((i+4)%13) + suits[z+1];
-            args[5]=String.valueOf((i+5)%13) + suits[z+2];
-            args[6]=String.valueOf((i+6)%13) + suits[z];
-            args[7]=String.valueOf((i+7)%13) + suits[z+1];
-            args[8]=String.valueOf((i+8)%13) + suits[z+2];
-            args[9]=String.valueOf((i+9)%13) + suits[z];
+            args[0]=(i%13) + suits[z];
+            args[1]=((i+1)%13) + suits[z+1];
+            args[2]=((i+2)%13) + suits[z+2];
+            args[3]=((i+3)%13) + suits[z];
+            args[4]=((i+4)%13) + suits[z+1];
+            args[5]=((i+5)%13) + suits[z+2];
+            args[6]=((i+6)%13) + suits[z];
+            args[7]=((i+7)%13) + suits[z+1];
+            args[8]=((i+8)%13) + suits[z+2];
+            args[9]=((i+9)%13) + suits[z];
             //Checking for tens, convert to value ten (t)
             for (int j=0; j<10;j++){
-                if (args[j].charAt(0).equals('1') && args[j].charAt(1).equals('0')){
+                if (String.valueOf(args[j].charAt(0)).equals("1") && String.valueOf(args[j].charAt(1)).equals('0')){
                     String newCard=args[j].substring(2);
                     args[j]="t"+ newCard;
                 }
             //Checking for 11, convert to value ten (j)
-            for (int j=0; j<10;j++){
-                if (args[j].charAt(0).equals('1') && args[j].charAt(1).equals('1')){
-                    String newCard=args[j].substring(2);
-                    args[j]="j"+ newCard;
+            for (j=0; j<10;j++) {
+                if (String.valueOf(args[j].charAt(0)).equals('1') && String.valueOf(args[j].charAt(1)).equals('1')) {
+                    String newCard = args[j].substring(2);
+                    args[j] = "j" + newCard;
                 }
+            }
             //Checking for 12, convert to value ten (q)
-            for (int j=0; j<10;j++){
-                if (args[j].charAt(0).equals('1') && args[j].charAt(1).equals('2')){
-                    String newCard=args[j].substring(2);
-                    args[j]="q"+ newCard;
+            for (j=0; j<10;j++) {
+                if (String.valueOf(args[j].charAt(0)).equals('1') && String.valueOf(args[j].charAt(1)).equals('2')) {
+                    String newCard = args[j].substring(2);
+                    args[j] = "q" + newCard;
                 }
+            }
             //Checking for 0, convert to value ten (k)
-            for (int j=0; j<10;j++){
-                if (args[j].charAt(0).equals('0')){
-                    String newCard=args[j].substring(2);
-                    args[j]="k"+ newCard;
+            for (j=0; j<10;j++) {
+                if (String.valueOf(args[j].charAt(0)).equals('0')) {
+                    String newCard = args[j].substring(2);
+                    args[j] = "k" + newCard;
                 }
+            }
             //Checking for ones, convert to value two (2)
-                if (args[j].charAt(0).equals('1')){
+                if (String.valueOf(args[j].charAt(0)).equals('1')){
                     String newCard=args[j].substring(1);
                     args[j]="2"+ newCard;
                 }
@@ -335,7 +338,7 @@ public class PokerTest {
         nonRainbowHelper(args,suits);
         suits[1]="c";
         nonRainbowHelper(args,suits);
-        suits[2]="h"
+        suits[2]="h";
         nonRainbowHelper(args,suits);
     }
     //Automated testing
@@ -343,45 +346,48 @@ public class PokerTest {
     public int[] fourSuitHelper(String[] args, String[] suits){
         //String[] suits = {"c", "h", "d","s"};
         int z=0;
-        int [] solution = new solution[13];
+        int [] solution = new int[13];
         //Hand generation
         for (int i=2;i<=14;i++){
-            args[0]=String.valueOf(i%13) + suits[z];
-            args[1]=String.valueOf((i+1)%13) + suits[z+1];
-            args[2]=String.valueOf((i+2)%13) + suits[z+2];
-            args[3]=String.valueOf((i+3)%13) + suits[z+3];
-            args[4]=String.valueOf((i+4)%13) + suits[z];
-            args[5]=String.valueOf((i+5)%13) + suits[z+1];
-            args[6]=String.valueOf((i+6)%13) + suits[z+2];
-            args[7]=String.valueOf((i+7)%13) + suits[z+3];
-            args[8]=String.valueOf((i+8)%13) + suits[z];
-            args[9]=String.valueOf((i+9)%13) + suits[z+1];
+            args[0]=(i%13) + suits[z];
+            args[1]=((i+1)%13) + suits[z+1];
+            args[2]=((i+2)%13) + suits[z+2];
+            args[3]=((i+3)%13) + suits[z+3];
+            args[4]=((i+4)%13) + suits[z];
+            args[5]=((i+5)%13) + suits[z+1];
+            args[6]=((i+6)%13) + suits[z+2];
+            args[7]=((i+7)%13) + suits[z+3];
+            args[8]=((i+8)%13) + suits[z];
+            args[9]=((i+9)%13) + suits[z+1];
             //Checking for tens, convert to value ten (t)
-            for (int j=0; j<10;j++){
-                if (args[j].charAt(0).equals('1') && args[j].charAt(1).equals('0')){
-                    String newCard=args[j].substring(2);
-                    args[j]="t"+ newCard;
+            for (int j=0; j<10;j++) {
+                if (String.valueOf(args[j].charAt(0)).equals('1') && String.valueOf(args[j].charAt(1)).equals('0')) {
+                    String newCard = args[j].substring(2);
+                    args[j] = "t" + newCard;
                 }
+            }
             //Checking for 11, convert to value ten (j)
-            for (int j=0; j<10;j++){
-                if (args[j].charAt(0).equals('1') && args[j].charAt(1).equals('1')){
-                    String newCard=args[j].substring(2);
-                    args[j]="j"+ newCard;
+            for (int j=0; j<10;j++) {
+                if (String.valueOf(args[j].charAt(0)).equals('1') && String.valueOf(args[j].charAt(1)).equals('1')) {
+                    String newCard = args[j].substring(2);
+                    args[j] = "j" + newCard;
                 }
+            }
             //Checking for 12, convert to value ten (q)
-            for (int j=0; j<10;j++){
-                if (args[j].charAt(0).equals('1') && args[j].charAt(1).equals('2')){
-                    String newCard=args[j].substring(2);
-                    args[j]="q"+ newCard;
+            for (int j=0; j<10;j++) {
+                if (String.valueOf(args[j].charAt(0)).equals('1') && String.valueOf(args[j].charAt(1)).equals('2')) {
+                    String newCard = args[j].substring(2);
+                    args[j] = "q" + newCard;
                 }
+            }
             //Checking for 0, convert to value ten (k)
-            for (int j=0; j<10;j++){
-                if (args[j].charAt(0).equals('0')){
-                    String newCard=args[j].substring(2);
-                    args[j]="k"+ newCard;
+            for (int j=0; j<10;j++) {
+                if (String.valueOf(args[j].charAt(0)).equals('0')) {
+                    String newCard = args[j].substring(2);
+                    args[j] = "k" + newCard;
                 }
             //Checking for ones, convert to value two (2)
-                if (args[j].charAt(0).equals('1')){
+                if (String.valueOf(args[j].charAt(0)).equals('1')){
                     String newCard=args[j].substring(1);
                     args[j]="2"+ newCard;
                 }
@@ -428,12 +434,12 @@ public class PokerTest {
             args[9]=String.valueOf((i+18)%10) + suits[z];
             //Checking for tens, convert to value ten (t)
             for (int j=0; j<10;j++){
-                if (args[j].charAt(0).equals('1') && args[j].charAt(1).equals('0')){
+                if (String.valueOf(args[j].charAt(0)).equals('1') && String.valueOf(args[j].charAt(1)).equals('0')){
                     String newCard=args[j].substring(2);
                     args[j]="t"+ newCard;
                 }
             //Checking for ones, convert to value two (2)
-                if (args[j].charAt(0).equals('1')){
+                if (String.valueOf(args[j].charAt(0)).equals('1')){
                     String newCard=args[j].substring(1);
                     args[j]="2"+ newCard;
                 }
