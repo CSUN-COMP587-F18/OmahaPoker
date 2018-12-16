@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="888757ae-58ff-42c1-bfa2-43f188434089" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Poker.java" beforeDir="false" afterPath="$PROJECT_DIR$/Poker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PokerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/PokerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OmahaPoker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OmahaPoker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OmahaPoker/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OmahaPoker/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OmahaPoker/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OmahaPoker/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OmahaPoker/Poker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OmahaPoker/Poker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OmahaPoker/PokerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OmahaPoker/PokerTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,13 +19,20 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/OmahaPoker$PokerAutomatedTest_testOddOnePlayerAutomated.ic" NAME="PokerAutomatedTest.testOddOnePlayerAutomated Coverage Results" MODIFIED="1544921951262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/OmahaPoker$PokerTest.ic" NAME="PokerTest Coverage Results" MODIFIED="1544921996084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="270" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Poker.java">
+        <entry file="file://$PROJECT_DIR$/PokerAutomatedTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="348" column="28" selection-start-line="348" selection-start-column="28" selection-end-line="348" selection-end-column="28" />
+            <state relative-caret-position="-7421">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -30,11 +43,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PokerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1854">
-              <caret line="131" column="24" lean-forward="true" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-3278">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Card.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -42,7 +61,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-386" />
+            <state relative-caret-position="15">
+              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -52,21 +73,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Documentation">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Card.java">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Poker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>setrank</find>
       <find>pair</find>
+      <find>7</find>
+      <find>rainbow</find>
+      <find>system.out.println</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -76,9 +106,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Player.java" />
-        <option value="$PROJECT_DIR$/Card.java" />
-        <option value="$PROJECT_DIR$/PokerTest.java" />
         <option value="$PROJECT_DIR$/Poker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/OmahaPoker/Card.java" />
+        <option value="$PROJECT_DIR$/src/main/java/OmahaPoker/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/OmahaPoker/Poker.java" />
+        <option value="$PROJECT_DIR$/PokerAutomatedTest.java" />
+        <option value="$PROJECT_DIR$/PokerTest.java" />
+        <option value="$PROJECT_DIR$/src/PokerTest.java" />
+        <option value="$PROJECT_DIR$/Card.java" />
       </list>
     </option>
   </component>
@@ -89,6 +124,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="960" />
     <option name="y" value="27" />
     <option name="width" value="960" />
     <option name="height" value="1053" />
@@ -98,6 +134,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -109,8 +147,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -118,11 +154,12 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543386429609" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544925153044" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testOmaha" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -136,71 +173,77 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PokerTest.testDinnerPartyOnePlayer">
-    <configuration name="PokerTest.testDinnerPartyOnePlayer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PokerAutomatedTest">
+    <configuration name="PokerAutomatedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OmahaPoker" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PokerTest" />
-      <option name="METHOD_NAME" value="testDinnerPartyOnePlayer" />
+      <option name="MAIN_CLASS_NAME" value="PokerAutomatedTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PokerAutomatedTest.testOddOnePlayerAutomated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OmahaPoker" />
+      <option name="PACKAGE_NAME" value="src" />
+      <option name="MAIN_CLASS_NAME" value="src.PokerAutomatedTest" />
+      <option name="METHOD_NAME" value="testOddOnePlayerAutomated" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PokerTest.testOrgyMultiplePlayers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PokerAutomatedTest.testThreePairOnePlayerAutomated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OmahaPoker" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PokerTest" />
-      <option name="METHOD_NAME" value="testOrgyMultiplePlayers" />
+      <option name="PACKAGE_NAME" value="src" />
+      <option name="MAIN_CLASS_NAME" value="src.PokerAutomatedTest" />
+      <option name="METHOD_NAME" value="testThreePairOnePlayerAutomated" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PokerTest.testOrgyOnePlayer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PokerAutomatedTest.testTripletsOnePlayerAutomated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OmahaPoker" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PokerTest" />
-      <option name="METHOD_NAME" value="testOrgyOnePlayer" />
+      <option name="PACKAGE_NAME" value="src" />
+      <option name="MAIN_CLASS_NAME" value="src.PokerAutomatedTest" />
+      <option name="METHOD_NAME" value="testTripletsOnePlayerAutomated" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PokerTest.testPoliticsMultiplePlayers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PokerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OmahaPoker" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PokerTest" />
-      <option name="METHOD_NAME" value="testPoliticsMultiplePlayers" />
-      <option name="TEST_OBJECT" value="method" />
+      <extension name="coverage" runner="jacoco" />
+      <option name="PACKAGE_NAME" value="src" />
+      <option name="MAIN_CLASS_NAME" value="src.PokerTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PokerTest.testPoliticsOnePlayer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Unnamed" type="PIT" factoryName="PIT Runner" REPORT_DIR="$PROJECT_DIR$/target/report" SOURCE_DIRS="$PROJECT_DIR$" TARGET_CLASSES="OmahaPoker.*" otherParams="--outputFormats XML,HTML" nameIsGenerated="true">
       <module name="OmahaPoker" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PokerTest" />
-      <option name="METHOD_NAME" value="testPoliticsOnePlayer" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.PokerTest.testOrgyOnePlayer" />
-      <item itemvalue="JUnit.PokerTest.testOrgyMultiplePlayers" />
-      <item itemvalue="JUnit.PokerTest.testPoliticsOnePlayer" />
-      <item itemvalue="JUnit.PokerTest.testPoliticsMultiplePlayers" />
-      <item itemvalue="JUnit.PokerTest.testDinnerPartyOnePlayer" />
+      <item itemvalue="JUnit.PokerAutomatedTest.testThreePairOnePlayerAutomated" />
+      <item itemvalue="JUnit.PokerAutomatedTest.testTripletsOnePlayerAutomated" />
+      <item itemvalue="JUnit.PokerAutomatedTest.testOddOnePlayerAutomated" />
+      <item itemvalue="JUnit.PokerTest" />
+      <item itemvalue="PIT Runner.Unnamed" />
+      <item itemvalue="JUnit.PokerAutomatedTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PokerTest.testDinnerPartyOnePlayer" />
-        <item itemvalue="JUnit.PokerTest.testPoliticsMultiplePlayers" />
-        <item itemvalue="JUnit.PokerTest.testPoliticsOnePlayer" />
-        <item itemvalue="JUnit.PokerTest.testOrgyMultiplePlayers" />
-        <item itemvalue="JUnit.PokerTest.testOrgyOnePlayer" />
+        <item itemvalue="JUnit.PokerAutomatedTest" />
+        <item itemvalue="JUnit.PokerTest" />
+        <item itemvalue="JUnit.PokerAutomatedTest.testOddOnePlayerAutomated" />
+        <item itemvalue="JUnit.PokerAutomatedTest.testTripletsOnePlayerAutomated" />
+        <item itemvalue="JUnit.PokerAutomatedTest.testThreePairOnePlayerAutomated" />
       </list>
     </recent_temporary>
   </component>
@@ -218,41 +261,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PokerTest_testOverfullHouseOnePlayer - 2018.11.27 at 22h 26m 31s.xml">
-      <configuration name="PokerTest.testOverfullHouseOnePlayer" configurationId="JUnit" />
+    <history-entry file="PokerAutomatedTest_testMonochromaticOnePlayerAutomated - 2018.12.15 at 16h 25m 14s.xml">
+      <configuration name="PokerAutomatedTest.testMonochromaticOnePlayerAutomated" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerTest_testOverfullHouseMultiplePlayers - 2018.11.27 at 22h 26m 34s.xml">
-      <configuration name="PokerTest.testOverfullHouseMultiplePlayers" configurationId="JUnit" />
+    <history-entry file="PokerAutomatedTest_testThreePairOnePlayerAutomated - 2018.12.15 at 16h 25m 37s.xml">
+      <configuration name="PokerAutomatedTest.testThreePairOnePlayerAutomated" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerTest_testHomoSapiensOnePlayer - 2018.11.27 at 22h 26m 37s.xml">
-      <configuration name="PokerTest.testHomoSapiensOnePlayer" configurationId="JUnit" />
+    <history-entry file="PokerAutomatedTest_testTripletsOnePlayerAutomated - 2018.12.15 at 16h 26m 44s.xml">
+      <configuration name="PokerAutomatedTest.testTripletsOnePlayerAutomated" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerTest_testHomoSapiensMultiplePlayers - 2018.11.27 at 22h 26m 41s.xml">
-      <configuration name="PokerTest.testHomoSapiensMultiplePlayers" configurationId="JUnit" />
+    <history-entry file="PokerAutomatedTest_testTripletsOnePlayerAutomated - 2018.12.15 at 16h 28m 52s.xml">
+      <configuration name="PokerAutomatedTest.testTripletsOnePlayerAutomated" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerTest_testKingdomOnePlayer - 2018.11.27 at 22h 26m 44s.xml">
-      <configuration name="PokerTest.testKingdomOnePlayer" configurationId="JUnit" />
+    <history-entry file="PokerAutomatedTest_testTripletsOnePlayerAutomated - 2018.12.15 at 16h 30m 56s.xml">
+      <configuration name="PokerAutomatedTest.testTripletsOnePlayerAutomated" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerTest_testOrgyOnePlayer - 2018.11.27 at 22h 26m 47s.xml">
-      <configuration name="PokerTest.testOrgyOnePlayer" configurationId="JUnit" />
+    <history-entry file="PokerAutomatedTest_testTripletsOnePlayerAutomated - 2018.12.15 at 16h 31m 35s.xml">
+      <configuration name="PokerAutomatedTest.testTripletsOnePlayerAutomated" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerTest_testOrgyMultiplePlayers - 2018.11.27 at 22h 26m 50s.xml">
-      <configuration name="PokerTest.testOrgyMultiplePlayers" configurationId="JUnit" />
+    <history-entry file="PokerAutomatedTest_testOddOnePlayerAutomated - 2018.12.15 at 16h 54m 50s.xml">
+      <configuration name="PokerAutomatedTest.testOddOnePlayerAutomated" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerTest_testPoliticsOnePlayer - 2018.11.27 at 22h 26m 54s.xml">
-      <configuration name="PokerTest.testPoliticsOnePlayer" configurationId="JUnit" />
+    <history-entry file="PokerAutomatedTest_testOddOnePlayerAutomated - 2018.12.15 at 16h 59m 13s.xml">
+      <configuration name="PokerAutomatedTest.testOddOnePlayerAutomated" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerTest_testPoliticsMultiplePlayers - 2018.11.27 at 22h 26m 57s.xml">
-      <configuration name="PokerTest.testPoliticsMultiplePlayers" configurationId="JUnit" />
+    <history-entry file="PokerTest - 2018.12.15 at 16h 59m 57s.xml">
+      <configuration name="PokerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerTest_testDinnerPartyOnePlayer - 2018.11.27 at 22h 27m 00s.xml">
-      <configuration name="PokerTest.testDinnerPartyOnePlayer" configurationId="JUnit" />
+    <history-entry file="PokerAutomatedTest - 2018.12.15 at 17h 12m 54s.xml">
+      <configuration name="PokerAutomatedTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25614974" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09625668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -260,7 +303,7 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32934782" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32934782" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -270,8 +313,9 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32934782" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32934782" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32994652" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24945055" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven" order="4" weight="0.32994652" />
@@ -280,25 +324,54 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="333" selection-start-line="333" selection-end-line="333" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Documentation" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/OmahaPoker/Documentation" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/OmahaPoker/LICENSE" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/OmahaPoker/PokerTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/OmahaPoker/Player.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/OmahaPoker/Poker.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/OmahaPoker/PokerAutomatedTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/OmahaPoker/Card.java" />
     <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Documentation">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Card.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-386" />
+        <state relative-caret-position="15">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Poker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="348" column="28" selection-start-line="348" selection-start-column="28" selection-end-line="348" selection-end-column="28" />
+        <state relative-caret-position="30">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokerAutomatedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7421">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -307,11 +380,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PokerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1854">
-          <caret line="131" column="24" lean-forward="true" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-3278">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
