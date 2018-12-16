@@ -5,6 +5,21 @@ import java.util.ArrayList;
 public class PokerAutomatedTest {
     ArrayList<Player> players= new ArrayList<Player>();
     int numplayers=0;
+    /*Note for readers*/
+    /*Here I am performing automated testing where I am providing generators
+    to automatically test multiple hands.
+    I am generally creating about 12 hands per generator. if i is being incremented
+    and modified by i % 13, here is a quick rundown on the status of i during the loop.
+    =>start of loop, i = 2
+    => i % 13 = 2
+    => loop continues...
+    => i = 14, end of loop
+    => 14 % 13 = 1
+    => This is still a unique set of hands
+    => if i == 15, 15 % 13 = 2, which is a repeating the first hand when i = 2.
+    Also, the difference between most generators will be the way i is being incremented
+    throughout the loop. Sometimes, there may be a difference in what i consider i = 1 to be.
+    */
     //Automated testing
     //This function is called to run nonrainbow tests for all possible nonrainbow hands ( Assuming 3 suits )
     public void nonRainbowHelper(String[] args, String[] suits){
