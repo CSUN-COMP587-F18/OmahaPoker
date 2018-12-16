@@ -7,11 +7,17 @@ public class PokerTest {
     ArrayList<Player> players= new ArrayList<Player>();
     int numplayers=0;
 
-    //starting hand 2c 3c 4c 2s 3s 5d 8d jd 7d 8c
-    //hearts, diamonds, clubs, spades
-    //0,1,2,3
+    /*Note for readers*/
+    /*I am running two tests per hand to ensure two things.
+    (1) the hand is being identified correctly 
+    (2) If multiple players have that hand, there also should be no issue.
+    Some hands, Like Dinner party, where the player must come up with 3 queens
+    and 3 kings are impossible to simulate two players getting that at the same time.
+    So only one player was used.
+    These tests are arbitrary and are just used to prove that there is a basic level of compentence
+    in the hand identifier
+*/
 
-    @Test
     public void testNonRainbowOnePlayer(){
         String [] args={"2c", "3c","4c","2s","3s", "5d", "8d", "jd", "7d", "8c"};
         players=Poker.setCards(args,players,numplayers);
